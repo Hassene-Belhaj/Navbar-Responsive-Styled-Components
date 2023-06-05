@@ -3,7 +3,7 @@ import { CloseIcon, Container,LinkItem,Logo,MenuDiv, MenuIcon, MenuSm, Nav, NavS
 import { useState } from 'react'
 
 const Navbar = () => {
-   const [toggle , setToggle] = useState(false)
+   const [toggle , setToggle] = useState(true)
    const handleToggle = () =>setToggle(!toggle)
    const handleClose =() =>setToggle(!toggle)
   return (
