@@ -4,7 +4,7 @@ import {AiOutlineMenu ,AiOutlineClose} from 'react-icons/ai'
 
 export const Container = styled.div`
 width: 100%;
-height: 100vh;
+height: 100%;
 background: #e8e8e8;
 position: relative;
 z-index: 10;
@@ -19,6 +19,7 @@ justify-content: space-between;
 align-items: center;
 `
 export const Logo  = styled(Link)`
+position: fixed;
 width: 150px;
 height: auto;
 color: #fff;
@@ -58,8 +59,8 @@ display: none;
 width: 100%;
 height: 100vh;
 background: #000;
-position: absolute;
-top: 0;
+position: fixed;
+top:0;
 bottom: 0;
 left: ${({toggle})=>toggle ? "-100%" : 0};
 transition: all 0.3s ease-in-out;
@@ -105,7 +106,7 @@ display: none;
 z-index: 50;
 @media screen and (max-width : 768px) {
 display    :block ;
-position: absolute;
+position: fixed;
 top: 5;
 right: 0;
 margin-right: 2rem;
@@ -118,7 +119,7 @@ display: none;
 z-index: 50;
 @media screen and (max-width : 768px) {
 display    :block ;
-position: absolute;
+position: fixed;
 top: 5;
 right: 0;
 margin-right: 2rem;
