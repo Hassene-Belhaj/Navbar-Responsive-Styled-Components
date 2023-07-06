@@ -62,7 +62,7 @@ background: #000;
 position: fixed;
 top:0;
 bottom: 0;
-left: ${({toggle})=>toggle ? "-100%" : 0};
+left: ${({show})=>show ? "-100%" : 0};
 transition: all 0.3s ease-in-out;
 z-index: 20;
 display: flex;

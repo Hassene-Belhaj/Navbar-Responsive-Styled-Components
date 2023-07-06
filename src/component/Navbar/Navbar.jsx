@@ -3,9 +3,9 @@ import { CloseIcon, Container,LinkItem,Logo,MenuDiv, MenuIcon, MenuSm, Nav, NavS
 import { useState } from 'react'
 
 const Navbar = () => {
-   const [toggle , setToggle] = useState(true)
-   const handleToggle = () =>setToggle(!toggle)
-   const handleClose =() =>setToggle(!toggle)
+   const [show , setShow] = useState(true)
+   const handleToggle = () =>setShow(!show)
+   const handleClose =() =>setShow(!show)
   return (
     <Container>
        <Nav>
@@ -20,23 +20,21 @@ const Navbar = () => {
                 <LinkItem>dolor</LinkItem>  
              </MenuDiv>
 
-         {toggle ? <MenuIcon onClick={handleToggle} size={30}/>  
+         {show ? <MenuIcon onClick={handleToggle} size={30}/>  
          :
           <CloseIcon onClick={handleToggle} size={30}/> }
                 
                  
        </Nav>
 
- <NavSm toggle={toggle}>
-              <MenuSm>
-                <LinkItem onClick={handleClose}>lorem</LinkItem>    
-                <LinkItem onClick={handleClose}>ipsum</LinkItem>    
-                <LinkItem onClick={handleClose}>dolor</LinkItem> 
-               </MenuSm>  
-       </NavSm>   
-        
-      
-      
+         <NavSm show={show ? 1 : 0}>
+                  <MenuSm>
+                     <LinkItem onClick={handleClose}>lorem</LinkItem>    
+                     <LinkItem onClick={handleClose}>ipsum</LinkItem>    
+                     <LinkItem onClick={handleClose}>dolor</LinkItem> 
+                  </MenuSm>  
+         </NavSm>   
+   
     </Container>
     )
 }
